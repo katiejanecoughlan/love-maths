@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-// Press enter key to submit answer
-    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+    // Press enter key to submit answer
+    document.getElementById("answer-box").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             checkAnswer();
         }
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function runGame(gameType) {
 
-// Resets the answer box to blank after submitting an answer    
+    // Resets the answer box to blank after submitting an answer    
     document.getElementById("answer-box").value = "";
-// Webpage starts with cursor already in the answer box
+    // Webpage starts with cursor already in the answer box
     document.getElementById("answer-box").focus();
 
     //Creates two random numbers between 1 and 25
@@ -149,3 +149,23 @@ function displayDivisionQuestion(operand1, operand2) {
     document.getElementById('operator').textContent = "/";
 
 }
+
+/**
+ * Alternative division function to make the game questions easier
+ */
+
+// function displayDivisionQuestion(operand1, operand2) {
+//     // Use modulus operator to check for remainder
+//     const remainder = operand1 % operand2;
+
+//     if (remainder !== 0) {
+//         operand1 -= remainder;
+//     }
+
+//     document.getElementById('operand1').textContent = operand1;
+//     document.getElementById('operand2').textContent = operand2;
+//     document.getElementById('operator').textContent = "/";
+
+//     // Optionally, you can return the correct answer for validation
+//     return operand1 / operand2;
+// }
