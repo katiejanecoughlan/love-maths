@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function runGame(gameType) {
 
+        // Check if gameType is null or undefined, and provide a default value
+        gameType = gameType || "addition";
+
     // Resets the answer box to blank after submitting an answer    
     document.getElementById("answer-box").value = "";
     // Webpage starts with cursor already in the answer box
