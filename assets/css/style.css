@@ -19,8 +19,10 @@ body {
     padding-right: 5px;
 }
 
-/* ------Popover------ */
-
+/* ------Alert------ */
+#tip {
+max-width: fit-content;
+}
 
 /* --------- Game layout */
 
